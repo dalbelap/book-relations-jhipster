@@ -1,0 +1,29 @@
+{
+    "bidarApp": {
+        "relation" : {
+            "home": {
+                "title": "Relations",
+                "createLabel": "Crear nuevo Relation",
+                "createOrEditLabel": "Crear o editar Relation"
+            },
+            "created": "Un nuevo Relation ha sido creado con el identificador {{ param }}",
+            "updated": "Un Relation ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Relation ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Relation {{ id }}?"
+            },
+            "detail": {
+                "title": "Relation"
+            },
+            "code": "Code",
+            "date": "Date",
+            "author": "Author",
+            "title": "Title",
+            "testimonial": "Testimonial",
+            "digitalSampleUrl": "DigitalSampleUrl",
+            "digitalSampleFile": "DigitalSampleFile",
+            "digitalSampleFile2": "DigitalSampleFile2",
+            "user": "User"
+        }
+    }
+}

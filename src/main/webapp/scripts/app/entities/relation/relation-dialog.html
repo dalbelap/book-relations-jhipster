@@ -1,0 +1,155 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myRelationLabel" translate="bidarApp.relation.home.createOrEditLabel">Create or edit a Relation</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="relation.id" readonly />
+        </div>
+        <div class="form-group">
+            <label translate="bidarApp.relation.code" for="field_code">Code</label>
+            <input type="text" class="form-control" name="code" id="field_code"
+                    ng-model="relation.code"
+                    required ng-minlength="1" ng-maxlength="20" />
+            <div ng-show="editForm.code.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.code.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.code.$error.minlength" translate="entity.validation.minlength" translate-value-min="1">
+                    This field is required to be at least 1 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.code.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="bidarApp.relation.date" for="field_date">Date</label>
+            <input type="text" class="form-control" name="date" id="field_date"
+                    ng-model="relation.date"
+                    required />
+            <div ng-show="editForm.date.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.date.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="bidarApp.relation.author" for="field_author">Author</label>
+            <input type="text" class="form-control" name="author" id="field_author"
+                    ng-model="relation.author"
+                    required ng-minlength="1" ng-maxlength="100" />
+            <div ng-show="editForm.author.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.author.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.author.$error.minlength" translate="entity.validation.minlength" translate-value-min="1">
+                    This field is required to be at least 1 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.author.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="bidarApp.relation.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                    ng-model="relation.title"
+                    required ng-minlength="1" ng-maxlength="255" />
+            <div ng-show="editForm.title.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.title.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.title.$error.minlength" translate="entity.validation.minlength" translate-value-min="1">
+                    This field is required to be at least 1 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.title.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="255">
+                    This field cannot be longer than 255 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="bidarApp.relation.testimonial" for="field_testimonial">Testimonial</label>
+            <input type="text" class="form-control" name="testimonial" id="field_testimonial"
+                    ng-model="relation.testimonial"
+                     />
+        </div>
+        <div class="form-group">
+            <label translate="bidarApp.relation.digitalSampleUrl" for="field_digitalSampleUrl">DigitalSampleUrl</label>
+            <input type="text" class="form-control" name="digitalSampleUrl" id="field_digitalSampleUrl"
+                    ng-model="relation.digitalSampleUrl"
+                     />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="setDigitalSampleFile($file, relation)" ngf-pattern="'image/*'">
+            <label translate="bidarApp.relation.digitalSampleFile" for="field_digitalSampleFile">DigitalSampleFile</label>
+            <div>
+                <img data-ng-src="{{'data:' + relation.digitalSampleFileContentType + ';base64,' + relation.digitalSampleFile}}" style="max-height: 100px;" ng-if="relation.digitalSampleFile"/>
+                <div class="help-block clearfix">
+                    <span class="pull-left">{{relation.digitalSampleFileContentType}} {{byteSize(relation.digitalSampleFile)}}</span>
+                    <button ng-click="relation.digitalSampleFile=null;relation.digitalSampleFileContentType=null;"
+                            ng-if="relation.digitalSampleFile"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="file" ngf-select class="btn btn-default btn-block"
+                        ngf-change="setDigitalSampleFile($file, relation)" accept="image/*" translate="entity.action.addimage">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="digitalSampleFile" id="field_digitalSampleFile"
+                    ng-model="relation.digitalSampleFile"
+                     />
+            <input type="hidden" class="form-control" name="digitalSampleFileContentType" id="field_digitalSampleFileContentType"
+                    ng-model="relation.digitalSampleFileContentType" />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="setDigitalSampleFile2($file, relation)" ngf-pattern="'image/*'">
+            <label translate="bidarApp.relation.digitalSampleFile2" for="field_digitalSampleFile2">DigitalSampleFile2</label>
+            <div>
+                <img data-ng-src="{{'data:' + relation.digitalSampleFile2ContentType + ';base64,' + relation.digitalSampleFile2}}" style="max-height: 100px;" ng-if="relation.digitalSampleFile2"/>
+                <div class="help-block clearfix">
+                    <span class="pull-left">{{relation.digitalSampleFile2ContentType}} {{byteSize(relation.digitalSampleFile2)}}</span>
+                    <button ng-click="relation.digitalSampleFile2=null;relation.digitalSampleFile2ContentType=null;"
+                            ng-if="relation.digitalSampleFile2"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="file" ngf-select class="btn btn-default btn-block"
+                        ngf-change="setDigitalSampleFile2($file, relation)" accept="image/*" translate="entity.action.addimage">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="digitalSampleFile2" id="field_digitalSampleFile2"
+                    ng-model="relation.digitalSampleFile2"
+                     />
+            <input type="hidden" class="form-control" name="digitalSampleFile2ContentType" id="field_digitalSampleFile2ContentType"
+                    ng-model="relation.digitalSampleFile2ContentType" />
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || editForm.$submitted" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

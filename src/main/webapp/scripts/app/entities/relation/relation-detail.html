@@ -1,0 +1,104 @@
+
+<div>
+    <h2><span translate="bidarApp.relation.detail.title">Relation</span> {{relation.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="bidarApp.relation.code">Code</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{relation.code}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="bidarApp.relation.date">Date</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{relation.date}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="bidarApp.relation.author">Author</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{relation.author}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="bidarApp.relation.title">Title</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{relation.title}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="bidarApp.relation.testimonial">Testimonial</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{relation.testimonial}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="bidarApp.relation.digitalSampleUrl">DigitalSampleUrl</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{relation.digitalSampleUrl}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="bidarApp.relation.digitalSampleFile">DigitalSampleFile</span>
+                </td>
+                <td>
+                    <img data-ng-src="{{'data:' + relation.digitalSampleFileContentType + ';base64,' + relation.digitalSampleFile}}" style="max-width: 100%;" ng-if="relation.digitalSampleFile"/>
+                    <div>{{relation.digitalSampleFileContentType}}  {{byteSize(relation.digitalSampleFile)}}</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="bidarApp.relation.digitalSampleFile2">DigitalSampleFile2</span>
+                </td>
+                <td>
+                    <img data-ng-src="{{'data:' + relation.digitalSampleFile2ContentType + ';base64,' + relation.digitalSampleFile2}}" style="max-width: 100%;" ng-if="relation.digitalSampleFile2"/>
+                    <div>{{relation.digitalSampleFile2ContentType}}  {{byteSize(relation.digitalSampleFile2)}}</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Created</span>
+                </td>
+                <td>
+                    {{relation.created}}
+                </td>
+            </tr>
+            <tr ng-if="relation.modified">
+                <td>
+                    <span>Modified</span>
+                </td>
+                <td>
+                    {{relation.modified}}
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

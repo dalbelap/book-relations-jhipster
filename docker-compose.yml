@@ -1,0 +1,11 @@
+jhipster-dev-postgresql:
+  container_name: bidar-dev-postgresql
+  image: postgres
+  # volumes:
+  # - ~/volumes/jhipster/bidar/dev-postgresql/:/var/lib/postgresql/
+  environment:
+  - POSTGRES_USER=bidar
+  - POSTGRES_PASSWORD=
+  ports:
+  - "5432:5432"
+

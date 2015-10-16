@@ -1,0 +1,26 @@
+{
+    "bidarApp": {
+        "relation" : {
+            "home": {
+                "title": "Relations",
+                "createLabel": "Create a new Relation",
+                "createOrEditLabel": "Create or edit a Relation"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Relation {{ id }}?"
+            },
+            "detail": {
+                "title": "Relation"
+            },
+            "code": "Code",
+            "date": "Date",
+            "author": "Author",
+            "title": "Title",
+            "testimonial": "Testimonial",
+            "digitalSampleUrl": "DigitalSampleUrl",
+            "digitalSampleFile": "DigitalSampleFile",
+            "digitalSampleFile2": "DigitalSampleFile2",
+            "user": "User"
+        }
+    }
+}
