@@ -36,13 +36,13 @@ spring:
     data:
         elasticsearch:
             cluster-name:
-            cluster-nodes: 172.16.4.126:40717
+            cluster-nodes: ${ES_HOST}:${ES_PORT}
 
     mail:
-        host: localhost
-        port: 25
-        username:
-        password:
+        host: ${SMTP_HOST}
+        port: ${SMTP_PORT}
+        username: ${SMTP_USER}
+        password: ${SMTP_PASS}
     thymeleaf:
         cache: true
 
