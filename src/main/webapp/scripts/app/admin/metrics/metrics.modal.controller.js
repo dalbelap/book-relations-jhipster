@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .controller('MetricsModalController', function($scope, $modalInstance, threadDump) {
 
         $scope.threadDump = threadDump;

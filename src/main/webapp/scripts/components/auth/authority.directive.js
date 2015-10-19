@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .directive('hasAnyAuthority', ['Principal', function (Principal) {
         return {
             restrict: 'A',

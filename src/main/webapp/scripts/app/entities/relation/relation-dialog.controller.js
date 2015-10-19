@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp').controller('RelationDialogController',
+angular.module('relacionesApp').controller('RelationDialogController',
     ['$scope', '$stateParams', '$modalInstance', 'entity', 'Relation', 'User',
         function($scope, $stateParams, $modalInstance, entity, Relation, User) {
 
@@ -13,7 +13,7 @@ angular.module('bidarApp').controller('RelationDialogController',
         };
 
         var onSaveFinished = function (result) {
-            $scope.$emit('bidarApp:relationUpdate', result);
+            $scope.$emit('relacionesApp:relationUpdate', result);
             $modalInstance.close(result);
         };
 

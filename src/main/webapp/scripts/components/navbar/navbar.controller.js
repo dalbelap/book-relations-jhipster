@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .controller('NavbarController', function ($scope, $location, $state, Auth, Principal, ENV) {
         $scope.isAuthenticated = Principal.isAuthenticated;
         $scope.$state = $state;

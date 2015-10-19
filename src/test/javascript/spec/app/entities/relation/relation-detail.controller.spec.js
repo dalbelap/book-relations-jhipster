@@ -3,7 +3,7 @@
 describe('Relation Detail Controller', function() {
   var scope, rootScope, entity, createController;
 
-  beforeEach(module('bidarApp'));
+  beforeEach(module('relacionesApp'));
   beforeEach(inject(function($rootScope, $controller) {
     rootScope = $rootScope;
     scope = rootScope.$new();
@@ -24,7 +24,7 @@ describe('Relation Detail Controller', function() {
   describe('Root Scope Listening', function() {
     it('Unregisters root scope listener upon scope destruction',
       function() {
-        var eventType = 'bidarApp:relationUpdate';
+        var eventType = 'relacionesApp:relationUpdate';
 
         createController();
         expect(rootScope.$$listenerCount[eventType]).toEqual(1);

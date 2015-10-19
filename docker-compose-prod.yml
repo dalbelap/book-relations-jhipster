@@ -1,18 +1,18 @@
 jhipster-prod-elasticsearch:
-  container_name: bidar-prod-elasticsearch
+  container_name: relaciones-prod-elasticsearch
   image: elasticsearch
   # volumes:
-  # - ~/volumes/jhipster/bidar/prod-elasticsearch/:/usr/share/elasticsearch/data/
+  # - ~/volumes/jhipster/relaciones/prod-elasticsearch/:/usr/share/elasticsearch/data/
   ports:
   - "9200:9200"
   - "9300:9300"
 jhipster-prod-postgresql:
-  container_name: bidar-prod-postgresql
+  container_name: relaciones-prod-postgresql
   image: postgres
   # volumes:
-  # - ~/volumes/jhipster/bidar/prod-postgresql/:/var/lib/postgresql/
+  # - ~/volumes/jhipster/relaciones/prod-postgresql/:/var/lib/postgresql/
   environment:
-  - POSTGRES_USER=bidar
+  - POSTGRES_USER=relaciones
   - POSTGRES_PASSWORD=
   ports:
   - "5432:5432"

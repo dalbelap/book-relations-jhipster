@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .factory('AlertService', function ($timeout, $sce,$translate) {
         var exports = {
             factory: factory,

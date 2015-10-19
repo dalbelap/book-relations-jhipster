@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .config(function ($stateProvider) {
         $stateProvider
             .state('relation', {
@@ -8,7 +8,7 @@ angular.module('bidarApp')
                 url: '/relations',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'bidarApp.relation.home.title'
+                    pageTitle: 'relacionesApp.relation.home.title'
                 },
                 views: {
                     'content@': {
@@ -29,7 +29,7 @@ angular.module('bidarApp')
                 url: '/relation/{id}',
                 data: {
                     authorities: ['ROLE_USER'],
-                    pageTitle: 'bidarApp.relation.detail.title'
+                    pageTitle: 'relacionesApp.relation.detail.title'
                 },
                 views: {
                     'content@': {

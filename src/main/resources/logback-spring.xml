@@ -27,7 +27,7 @@
     </appender>
 -->
 
-    <logger name="io.github.bidar" level="${logback.loglevel}"/>
+    <logger name="io.github.relaciones" level="${logback.loglevel}"/>
 
     <logger name="javax.activation" level="WARN"/>
     <logger name="javax.mail" level="WARN"/>

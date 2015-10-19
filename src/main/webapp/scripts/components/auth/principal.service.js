@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .factory('Principal', function Principal($q, Account) {
         var _identity,
             _authenticated = false;

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .factory('AuditsService', function ($http) {
         return {
             findAll: function () {

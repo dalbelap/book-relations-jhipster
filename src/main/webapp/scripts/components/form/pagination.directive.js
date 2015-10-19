@@ -1,8 +1,8 @@
 /* globals $ */
 'use strict';
 
-angular.module('bidarApp')
-    .directive('bidarAppPagination', function() {
+angular.module('relacionesApp')
+    .directive('relacionesAppPagination', function() {
         return {
             templateUrl: 'scripts/components/form/pagination.html'
         };

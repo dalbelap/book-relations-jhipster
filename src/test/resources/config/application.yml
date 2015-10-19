@@ -19,7 +19,7 @@
 spring:
     datasource:
         driver-class-name: org.h2.jdbcx.JdbcDataSource
-        url: jdbc:h2:mem:bidar;DB_CLOSE_DELAY=-1
+        url: jdbc:h2:mem:relaciones;DB_CLOSE_DELAY=-1
         name:
         username:
         password:
@@ -75,7 +75,7 @@ jhipster:
     security:
         authentication:
             oauth:
-                clientid: bidarapp
+                clientid: relacionesapp
                 secret: mySecretOAuthSecret
                 # Token is valid 30 minutes
                 tokenValidityInSeconds: 1800
@@ -85,8 +85,8 @@ jhipster:
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
     swagger:
-        title: bidar API
-        description: bidar API documentation
+        title: relaciones API
+        description: relaciones API documentation
         version: 0.0.1
         termsOfServiceUrl:
         contact:

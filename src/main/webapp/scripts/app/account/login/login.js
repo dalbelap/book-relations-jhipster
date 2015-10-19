@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .config(function ($stateProvider) {
         $stateProvider
             .state('login', {
                 parent: 'account',
                 url: '/login',
                 data: {
-                    authorities: [], 
+                    authorities: [],
                     pageTitle: 'login.title'
                 },
                 views: {

@@ -1,8 +1,8 @@
-# Bidar References
+# Relation References
 
 A database text to store and find resources. It stores a date (string values), code, autor, title, url and two images. Also relation each resource with the autenticated user. Only de current user can view and edit its resources.
 
-Bidar was generated using JHipster and PostgreSQL, you can find documentation and help at [JHipster][].
+Relation References application web was generated with JHipster using PostgreSQL database, you can find documentation and help at [JHipster][].
 
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
@@ -31,7 +31,7 @@ Add the `-h` flag on any command to see how you can use it. For example, `bower 
 
 # Building for production
 
-To optimize the bidar client for production, run:
+To optimize the relaciones client for production, run:
 
     mvn -Pprod clean package
 
@@ -54,9 +54,9 @@ Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in
 
 To setup this project in Jenkins, use the following configuration:
 
-* Project name: `bidar`
+* Project name: `relaciones`
 * Source Code Management
-    * Git Repository: `git@github.com:xxxx/bidar.git`
+    * Git Repository: `git@github.com:xxxx/relaciones.git`
     * Branches to build: `*/master`
     * Additional Behaviours: `Wipe out repository & force clone`
 * Build Triggers
@@ -108,11 +108,11 @@ jhipster:
         maxPoolSize: 50
         queueCapacity: 10000
     mail:
-        from: bidar@localhost
+        from: relaciones@localhost
     security:
         authentication:
             oauth:
-                clientid: bidarappId # Change this value
+                clientid: relacionesappId # Change this value
                 secret: secretKey # Change this value
                 # Token is valid 30 minutes
                 tokenValidityInSeconds: 1800
@@ -120,8 +120,8 @@ jhipster:
             # security key (this key should be unique for your application, and kept secret)
             key: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1 | sha256sum | cut -d' ' -f 1` # Change this value as random
     swagger:
-        title: bidar API
-        description: bidar API documentation
+        title: relaciones API
+        description: relaciones API documentation
         version: 0.0.1
         termsOfServiceUrl:
         contact:
@@ -214,7 +214,7 @@ $ rhc tail -a [appName]
 ```
 License
 -------
-Bidar
+Relation References
 Copyright (C) 2015  D. Albela
 
 This program is free software: you can redistribute it and/or modify

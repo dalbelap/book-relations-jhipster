@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .controller('RelationDetailController', function ($scope, $rootScope, $stateParams, entity, Relation, User) {
         $scope.relation = entity;
         $scope.load = function (id) {
@@ -8,7 +8,7 @@ angular.module('bidarApp')
                 $scope.relation = result;
             });
         };
-        var unsubscribe = $rootScope.$on('bidarApp:relationUpdate', function(event, result) {
+        var unsubscribe = $rootScope.$on('relacionesApp:relationUpdate', function(event, result) {
             $scope.relation = result;
         });
         $scope.$on('$destroy', unsubscribe);

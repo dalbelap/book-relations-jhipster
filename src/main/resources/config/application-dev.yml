@@ -20,10 +20,10 @@ spring:
             enabled: false # we use Grunt + BrowserSync for livereload
     datasource:
         driver-class-name: org.postgresql.ds.PGSimpleDataSource
-        url: jdbc:postgresql://localhost:5432/bidar
+        url: jdbc:postgresql://localhost:5432/relaciones
         name:
-        username: bidar
-        password: bidar
+        username: relaciones
+        password: relaciones
     jpa:
         database-platform: FixedPostgreSQL82Dialect
         database: POSTGRESQL
@@ -64,7 +64,7 @@ jhipster:
         ehcache:
             maxBytesLocalHeap: 16M
     mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: bidar@localhost
+        from: relaciones@localhost
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
         spark:
@@ -75,4 +75,4 @@ jhipster:
             enabled: false
             host: localhost
             port: 2003
-            prefix: bidar
+            prefix: relaciones

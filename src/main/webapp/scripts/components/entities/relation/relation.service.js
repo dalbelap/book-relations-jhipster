@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .factory('Relation', function ($resource, DateUtils) {
         return $resource('api/relations/:id', {}, {
             'query': { method: 'GET', isArray: true},

@@ -1,7 +1,7 @@
 {
-  "name": "bidar",
+  "name": "relaciones",
   "version": "0.0.0",
-  "description": "Description for bidar",
+  "description": "Description for relaciones",
   "private": true,
   "dependencies": {
   },

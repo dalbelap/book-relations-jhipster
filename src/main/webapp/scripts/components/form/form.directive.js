@@ -1,7 +1,7 @@
 /* globals $ */
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .directive('showValidation', function() {
         return {
             restrict: 'A',

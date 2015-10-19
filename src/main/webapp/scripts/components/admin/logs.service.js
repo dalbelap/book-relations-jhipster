@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .factory('LogsService', function ($resource) {
         return $resource('api/logs', {}, {
             'findAll': { method: 'GET', isArray: true},

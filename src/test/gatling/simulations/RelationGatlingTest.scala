@@ -35,7 +35,7 @@ class RelationGatlingTest extends Simulation {
         "Accept" -> """application/json"""
     )
 
-        val authorization_header = "Basic " + Base64.getEncoder.encodeToString("bidarapp:mySecretOAuthSecret".getBytes(StandardCharsets.UTF_8))
+        val authorization_header = "Basic " + Base64.getEncoder.encodeToString("relacionesapp:mySecretOAuthSecret".getBytes(StandardCharsets.UTF_8))
 
     val headers_http_authentication = Map(
         "Content-Type" -> """application/x-www-form-urlencoded""",
@@ -62,7 +62,7 @@ class RelationGatlingTest extends Simulation {
         .formParam("grant_type", "password")
         .formParam("scope", "read write")
         .formParam("client_secret", "mySecretOAuthSecret")
-        .formParam("client_id", "bidarapp")
+        .formParam("client_id", "relacionesapp")
         .formParam("submit", "Login")
         .check(jsonPath("$.access_token").saveAs("access_token")))
         .pause(1)

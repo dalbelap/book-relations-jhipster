@@ -17,27 +17,27 @@
             overflowToDisk="false"
             />
 
-    <cache name="io.github.bidar.domain.User"
+    <cache name="io.github.relaciones.domain.User"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="io.github.bidar.domain.Authority"
+    <cache name="io.github.relaciones.domain.Authority"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="io.github.bidar.domain.User.authorities"
+    <cache name="io.github.relaciones.domain.User.authorities"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="io.github.bidar.domain.PersistentToken"
+    <cache name="io.github.relaciones.domain.PersistentToken"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="io.github.bidar.domain.User.persistentTokens"
+    <cache name="io.github.relaciones.domain.User.persistentTokens"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="io.github.bidar.domain.Relation"
+    <cache name="io.github.relaciones.domain.Relation"
            timeToLiveSeconds="3600">
     </cache>
 </ehcache>

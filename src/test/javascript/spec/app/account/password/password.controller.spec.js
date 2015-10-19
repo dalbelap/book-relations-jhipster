@@ -2,7 +2,7 @@
 
 describe('Controllers Tests ', function () {
 
-    beforeEach(module('bidarApp'));
+    beforeEach(module('relacionesApp'));
 
     var $scope, $httpBackend, q, Auth;
 

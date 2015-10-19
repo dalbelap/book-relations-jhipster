@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .config(function ($stateProvider) {
         $stateProvider
             .state('audits', {

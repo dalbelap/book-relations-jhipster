@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .controller('RelationController', function ($scope, Relation, RelationSearch, ParseLinks) {
         $scope.relations = [];
         $scope.page = 0;

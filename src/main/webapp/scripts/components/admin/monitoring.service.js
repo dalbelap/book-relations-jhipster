@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .factory('MonitoringService', function ($rootScope, $http) {
         return {
             getMetrics: function () {

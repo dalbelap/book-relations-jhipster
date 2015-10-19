@@ -9,11 +9,11 @@
         <relativePath/>
     </parent>
 
-    <groupId>io.github.bidar</groupId>
-    <artifactId>bidar</artifactId>
+    <groupId>io.github.relaciones</groupId>
+    <artifactId>relaciones</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>bidar</name>
+    <name>relaciones</name>
 
     <repositories>
         <repository>
@@ -572,11 +572,11 @@
                     <changeLogFile>src/main/resources/config/liquibase/master.xml</changeLogFile>
                     <diffChangeLogFile>src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                     <driver>org.postgresql.Driver</driver>
-                    <url>jdbc:postgresql://localhost/bidar</url>
+                    <url>jdbc:postgresql://localhost/relaciones</url>
                     <defaultSchemaName></defaultSchemaName>
-                    <username>bidar</username>
-                    <password>bidar</password>
-                    <referenceUrl>hibernate:spring:io.github.bidar.domain?dialect=org.hibernate.dialect.PostgreSQL82Dialect</referenceUrl>
+                    <username>relaciones</username>
+                    <password>relaciones</password>
+                    <referenceUrl>hibernate:spring:io.github.relaciones.domain?dialect=org.hibernate.dialect.PostgreSQL82Dialect</referenceUrl>
                     <verbose>true</verbose>
                     <logging>debug</logging>
                     <diffExcludeObjects>oauth_access_token, oauth_approvals, oauth_client_details, oauth_client_token, oauth_code, oauth_refresh_token</diffExcludeObjects>

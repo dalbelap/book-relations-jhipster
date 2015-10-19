@@ -1,13 +1,13 @@
 'use strict';
 
-angular.module('bidarApp')
+angular.module('relacionesApp')
     .directive('jhAlert', function(AlertService) {
 		return {
             restrict: 'E',
             template: '<div class="alerts" ng-cloak="">' +
 			                '<alert ng-cloak="" ng-repeat="alert in alerts" type="{{alert.type}}" close="alert.close()"><pre>{{ alert.msg }}</pre></alert>' +
 			            '</div>',
-			controller: ['$scope', 
+			controller: ['$scope',
 	            function($scope) {
 	                $scope.alerts = AlertService.get();
 	                $scope.$on('$destroy', function () {
@@ -23,11 +23,11 @@ angular.module('bidarApp')
             template: '<div class="alerts" ng-cloak="">' +
 			                '<alert ng-cloak="" ng-repeat="alert in alerts" type="{{alert.type}}" close="alert.close()"><pre>{{ alert.msg }}</pre></alert>' +
 			            '</div>',
-			controller: ['$scope', 
+			controller: ['$scope',
 	            function($scope) {
 	                $scope.alerts = AlertService.get();
 
-					var cleanHttpErrorListener = $rootScope.$on('bidarApp.httpError', function (event, httpResponse) {
+					var cleanHttpErrorListener = $rootScope.$on('relacionesApp.httpError', function (event, httpResponse) {
 					    var i;
 					    event.stopPropagation();
 					    switch (httpResponse.status) {
@@ -42,7 +42,7 @@ angular.module('bidarApp')
 					                    var fieldError = httpResponse.data.fieldErrors[i];
 					                    // convert 'something[14].other[4].id' to 'something[].other[].id' so translations can be written to it
 					                    var convertedField = fieldError.field.replace(/\[\d*\]/g, "[]");
-					                    var fieldName = $translate.instant('bidarApp.' + fieldError.objectName + '.' + convertedField);
+					                    var fieldName = $translate.instant('relacionesApp.' + fieldError.objectName + '.' + convertedField);
 					                    addErrorAlert('Field ' + fieldName + ' cannot be empty', 'error.' + fieldError.message, {fieldName: fieldName});
 					                }
 					            } else if (httpResponse.data && httpResponse.data.message) {
@@ -68,10 +68,10 @@ angular.module('bidarApp')
 					});
 
 					var addErrorAlert = function (message, key, data) {
-						
+
 						key = key && key != null ? key : message;
-						AlertService.error(key, data); 
-						
+						AlertService.error(key, data);
+
 					}
 
 	            }

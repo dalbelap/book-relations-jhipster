@@ -2,7 +2,7 @@
 
 describe('Services Tests ', function () {
 
-    beforeEach(module('bidarApp'));
+    beforeEach(module('relacionesApp'));
 
     describe('Auth', function () {
         var $httpBackend, spiedLocalStorageService, authService, spiedAuthServerProvider;
@@ -27,7 +27,7 @@ describe('Services Tests ', function () {
             $httpBackend.verifyNoOutstandingExpectation();
             $httpBackend.verifyNoOutstandingRequest();
         });
-        
+
         it('should call backend on logout then call authServerProvider.logout', function(){
             //GIVEN
             //Set spy
