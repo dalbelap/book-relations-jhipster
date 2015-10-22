@@ -25,7 +25,7 @@ spring:
         username: ${OPENSHIFT_POSTGRESQL_DB_USERNAME}
         password: ${OPENSHIFT_POSTGRESQL_DB_PASSWORD}
     jpa:
-        database-platform: FixedPostgreSQL82Dialect
+        database-platform: io.github.relaciones.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL
         show_sql: false
         properties:
@@ -39,10 +39,15 @@ spring:
             cluster-nodes: ${ES_HOST}:${ES_PORT}
 
     mail:
-        host: ${SMTP_HOST}
-        port: ${SMTP_PORT}
-        username: ${SMTP_USER}
-        password: ${SMTP_PASS}
+        host: localhost
+        port: 465
+        username: postmaster@localhost
+        password: password
+        protocol: smtps
+        tls: true
+        auth: true
+        from: no-replay@localhost
+
     thymeleaf:
         cache: true
 
