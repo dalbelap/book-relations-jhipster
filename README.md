@@ -78,7 +78,7 @@ To setup this project in Jenkins, use the following configuration:
 YAML Configuration
 ------------------
 
-- Create application.yaml file with below data:
+- Create *src/main/resources/config/application.yml* file with the below data:
 ```
 spring:
     jpa:
@@ -120,14 +120,38 @@ jhipster:
             # security key (this key should be unique for your application, and kept secret)
             key: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1 | sha256sum | cut -d' ' -f 1` # Change this value as random
     swagger:
-        title: relaciones API
-        description: relaciones API documentation
+        title: Book relations API
+        description: Book relations API documentation
         version: 0.0.1
         termsOfServiceUrl:
         contact:
         license:
         licenseUrl:
 
+```
+
+- Create .yo-rc.json configuration file
+```
+{
+  "generator-jhipster": {
+    "baseName": "relaciones",
+    "packageName": "io.github.relaciones",
+    "packageFolder": "io/github/relaciones",
+    "authenticationType": "oauth2",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "rememberMeKey": "`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1 | sha256sum | cut -d' ' -f 1`"
+  }
+}
 ```
 
 - Email configuration: pre-configured for a [Mailgun](https://mailgun.com) service:
