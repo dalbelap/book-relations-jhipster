@@ -207,7 +207,7 @@ $ rhc cartridge add postgresql-9.2 -a [appName]
 ```
 3. Set production to JAVA_OPTS enviroment
 ```
-$ rhc env-set JAVA_OPTS="-Dspring.profiles.active=prod" --app [appName]
+$ rhc env set JAVA_OPTS="-Dspring.profiles.active=prod" --app [appName]
 ```
 
 4. Clone and configure deployment app
