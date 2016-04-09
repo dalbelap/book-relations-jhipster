@@ -189,7 +189,7 @@ $ mvn -Pprod -Dmaven.test.skip=true package
 $ java -jar ./target/flipper-0.0.1-SNAPSHOT.war --spring.profiles.active=prod
 ```
 
-Deploy in OpenShipt
+Deploy in OpenShift
 -------------------
 Classic deployment with 'yo jhipster:openshift' won't start for small gears because of the limited quota disk space. To resolve this issue on a small gear use a Tomcat 7 application with Java8 instead:
 0. Clone and compile this repo
@@ -209,6 +209,7 @@ $ rhc cartridge add postgresql-9.2 -a [appName]
 ```
 $ rhc env set JAVA_OPTS="-Dspring.profiles.active=prod" --app [appName]
 ```
+# Note: for [JBoss AS](https://developers.openshift.com/en/jbossas-environment-variables.html) use *JAVA_OPTS_EXT* instead
 
 4. Clone and configure deployment app
 ```
